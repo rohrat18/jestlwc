@@ -10,6 +10,7 @@
 		"type": "git",
 		"url": "git+https://github.com/rohrat18/jestlwc.git"
 	},
+  "publisher": "rohitniranjanamath",
   "categories": [
     "Snippets"
   ],
