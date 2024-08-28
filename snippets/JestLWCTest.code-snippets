@@ -1,0 +1,40 @@
+{
+    "Jest test for LWC": {
+  "prefix": "@jestlwctest",
+  "body": [
+    "import { createElement } from 'lwc';",
+    "import LWC_Name_Variable from ‘c/LWC_Name;",
+    "import { <method name> } from '@salesforce/apex/ApexClassName.MethodName;",
+    " ",
+    "// Mock the Apex method",
+    "jest.mock(",
+    "    '@salesforce/apex/ApexClassName.MethodName',",
+    "    () => {",
+    "        return {",
+    "            default: jest.fn(),",
+    "        };",
+    "    },",
+    "    { virtual: true }",
+    ");",
+    " ",
+    " ",
+    "describe('<component>', () => {",
+    "    afterEach(() => {",
+    "        // The DOM is cleaned up between tests to prevent test leaks",
+    "        while (document.body.firstChild) {",
+    "            document.body.removeChild(document.body.firstChild);",
+    "        }",
+    "    });",
+    " ",
+    "   it('Test case description', () => {",
+    "        const element = createElement('', { is: <component> });",
+    "   ",
+    "            expect() ;",
+    "        });",
+    "    });",
+    " ",
+    "});"
+  ],
+  "description": "Jest test for LWC"
+}
+}
